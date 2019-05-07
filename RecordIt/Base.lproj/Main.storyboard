@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RecordIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bcQ-nh-6QT">
+                                <rect key="frame" x="0.0" y="203" width="375" height="464"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="464" id="93A-lI-Dbq"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="464" id="gKP-KE-n6r"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="3U7-3Q-5E0">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3U7-3Q-5E0" id="cnw-WM-CBJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="efY-or-XuL"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="KbR-JD-1uS"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VL9-Zf-7Ro">
+                                <rect key="frame" x="143" y="55" width="89" height="86"/>
+                                <state key="normal" title="Start Recording" image="mic.png"/>
+                                <connections>
+                                    <action selector="record:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IW4-M0-bOZ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="Start Recording" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XPR-L8-Siu">
+                                <rect key="frame" x="124" y="26" width="127" height="21"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bcQ-nh-6QT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0EA-jx-eW9"/>
+                            <constraint firstItem="bcQ-nh-6QT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0fc-Na-S0l"/>
+                            <constraint firstItem="bcQ-nh-6QT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1YG-uP-9AH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VL9-Zf-7Ro" secondAttribute="trailing" constant="143" id="5sN-wP-hsP"/>
+                            <constraint firstItem="VL9-Zf-7Ro" firstAttribute="top" secondItem="XPR-L8-Siu" secondAttribute="bottom" constant="8" id="AML-bp-0K9"/>
+                            <constraint firstItem="VL9-Zf-7Ro" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="Iod-r0-BQq"/>
+                            <constraint firstItem="bcQ-nh-6QT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="JYS-tf-QW0"/>
+                            <constraint firstItem="bcQ-nh-6QT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="URE-md-GF7"/>
+                            <constraint firstItem="bcQ-nh-6QT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="V9d-pi-ftM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XPR-L8-Siu" secondAttribute="trailing" constant="124" id="hsb-yS-Ki5"/>
+                            <constraint firstItem="bcQ-nh-6QT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lBc-FP-mU4"/>
+                            <constraint firstItem="bcQ-nh-6QT" firstAttribute="top" secondItem="VL9-Zf-7Ro" secondAttribute="bottom" constant="62" id="lPk-GF-wkq"/>
+                            <constraint firstItem="XPR-L8-Siu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="laq-Ga-zKF"/>
+                            <constraint firstItem="bcQ-nh-6QT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oYo-RK-Hvk"/>
+                            <constraint firstItem="VL9-Zf-7Ro" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="143" id="sut-Ni-2y6"/>
+                            <constraint firstItem="bcQ-nh-6QT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tDG-MS-tem"/>
+                            <constraint firstItem="XPR-L8-Siu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="up4-yS-Dtn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonLabel" destination="VL9-Zf-7Ro" id="Ui7-kO-ALb"/>
+                        <outlet property="myTableView" destination="bcQ-nh-6QT" id="gzT-0u-zRU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="77.599999999999994" y="33.733133433283363"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mic.png" width="180" height="180"/>
+    </resources>
+</document>
